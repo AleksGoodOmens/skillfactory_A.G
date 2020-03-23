@@ -1,125 +1,164 @@
-body {
-    font-size: 1vw;
-    color: white;
+@font-face {
+    src: url(fonts/Bad_Script/BadScript-Regular.ttf);
+    font-family: "BadScript";
+}
+
+Body,
+html {
+    width: auto;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     margin: 0px;
     padding: 0px;
-    background: url(images/bg.jpg) no-repeat;
-    background-size: 100% 100%;
-    margin: auto;
 }
 
-hr {
-    margin: 0px;
-}
+
+/** Section header**/
 
 header {
+    background: url(images/photo01.jpg) no-repeat;
+    background-size: cover;
+    min-height: 720px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+header blockquote {
+    font-family: BadScript;
+    font-size: 3rem;
+    margin-left: 35%;
+    margin-right: 5%;
+    font-weight: bold;
+    text-shadow: 3px 3px 4px white, 0 0 2em white;
+}
+
+.header__nav {
+    display: flex;
+    align-self: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header__nav li:not(:first-child) {
+    margin-left: 10px;
+}
+
+.header__nav a {
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+    display: block;
+    padding: 4px;
+    padding-bottom: 0px;
+    justify-content: space-around;
+    background-color: lightgrey;
+    width: 200px;
     text-align: center;
-    font-size: 2em;
 }
 
-.navigation {
-    font-size: 0.5em;
-    margin: 0 100px;
+
+/** Section main **/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
 }
 
-h1,
-h2 {
-    margin: 0px;
-    font-style: oblique;
-    text-shadow: 5px 5px 10px black, 0 0 1em brown;
-    padding-left: 20%;
+.main__text {
+    width: 1024px;
+    text-align: justify;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column wrap;
+    font-size: 18px;
 }
 
-.tableAbout {
-    display: table;
+
+/** about **/
+
+.about {
+    display: flex;
+    ;
 }
 
-.aboutRow {
-    display: table-row;
+.about__photo {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding-left: 10px;
 }
 
-.photo {
-    display: table-cell;
-    width: 250px;
+.about p {
+    padding-left: 10px;
+    flex-wrap: nowrap;
 }
 
-.aboutPhoto {
-    display: table-cell;
-    font-size: 1em;
-    padding: 0px 10px;
-    vertical-align: top;
-    text-shadow: 5px 5px 10px black;
+.about__photo span,
+.main__text span {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.main__text__about_photo {
+    border-radius: 20px;
+    box-shadow: inset 0 0 1px 5px rgba(167, 41, 3, 0.418);
+    background-image: url(images/photo03.png);
+    background-size: cover;
+    flex-basis: auto;
+    width: 300px;
+}
+
+.project {
+    margin-top: 20px;
+    display: flex;
+    box-sizing: content-box;
+}
+
+.project p {
+    padding: 3px;
+    margin: 5px;
+    border: 5px solid rgba(167, 41, 3, 0.418);
+    text-align: center;
+    border-radius: 20%;
+}
+
+
+/****
+.main__text.about.main__text__about_photo {
+   
+}
+
+.main__text p {
+    display: flex;
+    width: 80%;
+    align-content: space-between;
+}
+
+
+}
+
+.main__text blockquote {
+    display: flex;
+    order: 1;
 }
 
 .contacts {
-    display: table-cell;
-    padding-left: 10px;
-    font-size: 1em;
-    vertical-align: top;
-    width: 20%;
-    text-shadow: 5px 5px 10px black;
+    display: flex;
+    align-content: space-between;
 }
 
-.skills {
-    margin: 0px;
-    font-size: 1.3em;
-    padding-left: 20%;
-}
 
-.skills li:nth-child(odd) {
-    margin-left: 5%;
-    margin-right: 60%;
-    color: white;
-    background-color: chocolate;
-    box-shadow: 5px 10px 5px black, 0 0 1em brown;
-}
-
-.skills li:nth-child(even) {
-    margin-left: 15%;
-    margin-right: 50%;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    background-color: goldenrod;
-    color: white;
-    box-shadow: 10px 5px 5px black, 0 0 1em brown;
-}
+/** Footer **/
 
 footer {
-    text-align: center;
-    font-size: 1em;
-    text-shadow: 5px 5px 10px black, 0 0 1em brown;
-}
-
-a {
-    color: orange;
-    line-height: 1.2;
-    position: relative;
-    padding: 0 14px;
-    text-transform: uppercase;
-}
-
-a:after {
-    content: "";
-    height: 100%;
-    min-width: 4px;
-    background: orange;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transition: all 0.5s;
-}
-
-a:hover:after {
-    min-width: 100%;
-    background: orange;
-    opacity: 0.35;
-}
-
-a:visited {
-    color: orange;
-}
-
-a:focus {
-    color: white;
-    background-color: orange;
+    flex-shrink: 0;
+    background-color: grey;
 }
