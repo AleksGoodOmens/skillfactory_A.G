@@ -109,11 +109,22 @@ main {
 
 .main__text__about_photo {
     border-radius: 20px;
+    flex: none;
+    width: 200px;
     box-shadow: inset 0 0 1px 5px rgba(167, 41, 3, 0.418);
     background-image: url(images/photo03.png);
     background-size: cover;
-    flex-basis: auto;
-    width: 300px;
+}
+
+blockquote {
+    font-family: "BadScript";
+    font-style: italic;
+    text-align: center;
+    font-size: 24px;
+    width: 600px;
+    display: flex;
+    align-self: center;
+    padding: 50px 50px;
 }
 
 .project {
@@ -130,34 +141,51 @@ main {
     border-radius: 20%;
 }
 
-
-/****
-.main__text.about.main__text__about_photo {
-   
-}
-
-.main__text p {
+.main__text__used_logo {
     display: flex;
-    width: 80%;
-    align-content: space-between;
+    justify-content: space-around;
+}
+
+.HTML5,
+.CSS,
+.JavaScript,
+.jQuery,
+.React {
+    border-radius: 20px;
+    flex: none;
+    width: 200px;
+    height: 200px;
+    box-shadow: inset 0 0 1px 2px rgba(167, 41, 3, 0.418);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.HTML5 {
+    background-image: url(images/html.png);
+}
+
+.CSS {
+    background-image: url(images/css.png);
+    margin: 0px 5px;
+}
+
+.JavaScript {
+    background-image: url(images/JavaScript.png);
+}
+
+.jQuery {
+    background-image: url(images/jQuery.png);
+    margin: 0px 5px;
 }
 
 
 }
-
-.main__text blockquote {
-    display: flex;
-    order: 1;
+.React {
+    background-image: url(images/React.png);
 }
-
-.contacts {
-    display: flex;
-    align-content: space-between;
-}
-
 
 /** Footer **/
-
 footer {
     flex-shrink: 0;
     background-color: grey;
