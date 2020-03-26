@@ -179,13 +179,13 @@ blockquote {
     margin: 0px 5px;
 }
 
-
-}
 .React {
     background-image: url(images/react.png);
 }
 
+
 /** Footer **/
+
 footer {
     flex-shrink: 0;
     background-color: grey;
